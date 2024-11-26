@@ -1,0 +1,132 @@
+:root {
+    --title-color: rgb(0, 0, 0);
+    --background-color: rgb(255, 255, 255);
+    --header-color: rgb(241, 0, 0);
+    --aside-left-color: rgb(253, 207, 0);
+    --aside-right-color: rgb(21, 255, 0);
+    --footer-color: rgb(0, 140, 255);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+header {
+    width: 100%;
+    background-color: var(--header-color);
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    color: var(--title-color);
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hf-title {
+    color: var(--title-color);
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    width: 60%;
+    background-color: var(--background-color);
+    height: 80vh;
+}
+
+aside {
+    width: 25%;
+    height: 80vh;
+}
+
+.left {
+    background-color: var(--aside-left-color);
+    height: 80vh;
+}
+
+.right {
+    background-color: var(--aside-right-color);
+    height: 80vh;
+}
+
+.site-footer {
+    width: 100%;
+    background-color: var(--footer-color);
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .main-section {
+        flex-wrap: wrap;
+    }
+
+    .main {
+        order: -1;
+        width: 100%;
+        height: 40vh;
+    }
+
+    .left, .right {
+        width: 50%;
+        height: 40vh;
+    }
+
+    .title {
+        margin-top: 2rem;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+    .main-section {
+        flex-direction: column;
+    }
+
+    header {
+        height: 20vh;
+    }
+
+    .main {
+        order: -1;
+        width: 100%;;
+        height: 20vh;
+    }
+
+    .left, .right {
+        width: 100%;;
+        height: 20vh;
+        flex-direction: row;
+    }
+
+    .site-footer {
+        width: 100%;;
+        height: 20vh;
+    }
+
+    .title {
+        margin-top: 3.5rem;
+    }
+}
